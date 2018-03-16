@@ -619,7 +619,7 @@ public class HTTPServerCommon {
 
     private static void sendHTMLError(int error, String message, HttpExchange exchange) {
         Headers outHeaders = exchange.getResponseHeaders();
-        outHeaders.set("Context-Type", "text/text");
+        outHeaders.set("Context-Type", "text/html");
         try {
             exchange.sendResponseHeaders(error, message.length());
             OutputStream outputStream = exchange.getResponseBody();
