@@ -304,7 +304,7 @@ public class HTTPServerCommon {
                 jsonObject.endObject();
                 jsonObject.endObject();
 
-                sendData("text/text", jsonObject.toString(), exchange);
+                sendData("application/json", jsonObject.toString(), exchange);
                 return;
             }
 
@@ -320,7 +320,7 @@ public class HTTPServerCommon {
                     jsonObject.endObject();
                     jsonObject.endObject();
 
-                    sendData("text/text", jsonObject.toString(), exchange);
+                    sendData("application/json", jsonObject.toString(), exchange);
                     return;
                 } else {
                     jsonObject.object().key("error").value("key not provided").endObject();
@@ -340,7 +340,7 @@ public class HTTPServerCommon {
                     jsonObject.key("value").value(dbString);
                     jsonObject.endObject();
                     jsonObject.endObject();
-                    sendData("text/text", jsonObject.toString(), exchange);
+                    sendData("application/json", jsonObject.toString(), exchange);
                     return;
                 } else {
                     jsonObject.object().key("error").value("key not provided").endObject();
@@ -367,7 +367,7 @@ public class HTTPServerCommon {
                 jsonObject.endArray();
                 jsonObject.endObject();
                 jsonObject.endObject();
-                sendData("text/text", jsonObject.toString(), exchange);
+                sendData("application/json", jsonObject.toString(), exchange);
                 return;
             }
 
@@ -431,7 +431,7 @@ public class HTTPServerCommon {
                 jsonObject.endArray();
                 jsonObject.endObject();
                 jsonObject.endObject();
-                sendData("text/text", jsonObject.toString(), exchange);
+                sendData("application/json", jsonObject.toString(), exchange);
                 return;
             }
 
